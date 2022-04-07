@@ -44,7 +44,7 @@ for (let i = 0; i < arrOfArr.length ; i++) {
 return finalMax;
 }
 
-let result = makeWork(arrOfArr, worker);
+let result = makeWork([[1,2,3], [10,20,30], [100,200,300]], worker);
 console.log ('Наибольшая сумма: ' + result);
 
 // Задание 3
@@ -65,5 +65,5 @@ let min = Infinity;
 return Math.abs(max - min);
 }
 
-let result2 = makeWork(arrOfArr, worker2);
+let result2 = makeWork([[1,2,3], [10,20,30], [100,200,300]], worker2);
 console.log ('Наибольшая разность наибольшего и наименьшего: ' + result2);
