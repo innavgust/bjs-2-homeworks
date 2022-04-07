@@ -1,4 +1,5 @@
 // Задание 1
+
 function getArrayParams(arr) {
   let min = Infinity;
   let max = -Infinity;
@@ -22,6 +23,7 @@ return { min: min, max: max, avg: avg };
 }
 
 // Задание 2
+
 function worker (arr) {
 let sum = 0; 
   for(let i = 0; i < arr.length; i++) {
@@ -46,6 +48,7 @@ let result = makeWork(arrOfArr, worker);
 console.log ('Наибольшая сумма: ' + result);
 
 // Задание 3
+
 function worker2 (arr) {
 let max = -Infinity; 
 let min = Infinity;
