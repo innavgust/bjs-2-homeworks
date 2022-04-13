@@ -14,7 +14,7 @@ function validateCount(num) {
     let finalCount = parseCount(num);
     return finalCount;
   } catch(e) {
-    console.log(e.message);
+    return e;
   }
 }
 
@@ -45,12 +45,30 @@ class Triangle {
   }
 }
 
+class fakeTriangle extends Triangle {
+  constructor(firstSide, secondSide, thirdSide) {
+    super(firstSide);
+    this.secondSide = secondSide;
+    this.thirdSide = thirdSide;
+  }
+  
+  getPerimeter() {
+    return ('Ошибка! Треугольник не существует');
+  }
+
+  getArea() {
+    return ('Ошибка! Треугольник не существует');
+  }
+}
+
+
 function getTriangle(a, b, c) {
   try {
     let triangle1 = new Triangle(a, b, c);
     return triangle1;
   }catch(err) {
-    console.log('Ошибка! Треугольник не существует');
+    let triangle2 = new fakeTriangle(a, b, c);
+    return triangle2;
   }
 }
 
