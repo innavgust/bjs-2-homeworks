@@ -95,7 +95,7 @@ class Library {
   giveBookByName(bookName) {
     const result2 = this.books.filter(book => book.name === bookName);
     if (result2.length != 0) {
-      const result3 = this.books.findIndex(book => book === result2);
+      const result3 = this.books.findIndex(book => book.name === bookName);
       this.books.splice(result3, 1);
       return result2;
     } else {
@@ -114,9 +114,9 @@ console.log(library.findBookBy("releaseDate", 1924));
 console.log(library.findBookBy("name", "Властелин колец"));
 
 console.log();
-
+                                              
 console.log("Количество книг до выдачи: " + library.books.length); 
-library.giveBookByName("Машина времени");
+console.log (library.giveBookByName("Машина времени"));
 console.log("Количество книг после выдачи: " + library.books.length);
 
 console.log();
